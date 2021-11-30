@@ -1,8 +1,10 @@
 # Cipher_Website
 
-A website where you can encrypt and decrupt text using **my own cipher**!
+A website with common HTML5 - CSS - JavaScript build template
 
-Main template: Python3 eel module  
-Web: HTML - CSS - JavaScript (with eel)
+### You can encrypt and decrupt text using **my own cipher**!
 
-Uses Python v3.9 virtual environment
+Uses not a very simple algorithm.  
+Functions are imported to `cipher.js` from another obfuscated file `KruASeCoder.js`.
+
+*I really hope that nobody will analyse that terrible obfuscated text*
