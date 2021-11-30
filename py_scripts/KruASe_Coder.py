@@ -25,21 +25,17 @@ def encode(text):
 
     result = ''
 
-    while text:
-        char = text[0]
+    for char in text:
         num = str(ord(char))
-        l = len(num)
-        sq = math.sqrt(l)
-        sq = round(sq*10)
+        sq = math.sqrt(len(num))
+        sq = round(sq * 10)
 
         local_key = random.randint(1, 4)
-        ciphered_sq = (sq-local_key) * local_key # so we always receive two-digit number
+        ciphered_sq = (sq - local_key) * local_key # so we always get two-digit number
 
-        loc_k = str(local_key) # to paste into cipher
-        cip_sq = str(ciphered_sq) if ciphered_sq // 10 != 0 else '0' + str(ciphered_sq) # "09" if 9, not "9"
-        result += loc_k + cip_sq + num
-
-        text = text[1:]
+        local_key = str(local_key) # to paste into cipher
+        ciphered_sq = str(ciphered_sq) if ciphered_sq // 10 != 0 else '0' + str(ciphered_sq) # "09" if 9, not "9"
+        result += local_key + ciphered_sq + num
     
     result = bin(int(result))[2:]
     key = result.index('0') # the main key
@@ -56,7 +52,7 @@ def encode(text):
         new_result += hex_symbols[ind % 16]
     result = new_result
 
-    key_fract = 0 # fractional part of a key
+    key_fract = 0 # fractional part of the key
     while result[0] == '0':
         result = result[1:]
         key_fract += 1
@@ -76,16 +72,14 @@ def decode(code, key):
 
     result = ''
 
-    print(key, type(key))
     key_int, key_fract = map(int, str(key).split('.'))
 
     code = hex(code)[2:]
     code = '0'*key_fract + code
-
     for char in code:
         ind = hex_symbols.index(char)
         ind -= key_int
-        result += hex_symbols[int((ind+16) % 16)] # if key_int > ind
+        result += hex_symbols[(ind+16) % 16] # if key_int > ind
     
     result = bin(int(result, 16))[2:]
     result = result.replace('1', '2')
