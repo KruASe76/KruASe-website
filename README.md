@@ -1,6 +1,6 @@
 # Cipher_Website
 
-A website where you can encrypt and decrupt text using *my own cipher*!
+A website where you can encrypt and decrupt text using **my own cipher**!
 
 Main template: Python3 eel module  
 Web: HTML - CSS - JavaScript (with eel)
