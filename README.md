@@ -1,6 +1,6 @@
 # Cipher_Website
 
-A website with common HTML5 - CSS - JavaScript build template
+A website with common **HTML5 - CSS - JavaScript build** template
 
 ### You can encrypt and decrupt text using **my own cipher**!
 
