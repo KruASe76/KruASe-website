@@ -71,6 +71,10 @@ button:active {
     border: 1px solid #aaaaaa;
 }
 
+textarea {
+    width: 50%;
+}
+
 input {
     width: 15rem;
 }

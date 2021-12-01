@@ -42,7 +42,7 @@ function encrypt(text) {
 
     result = BigInt("0b" + result).toString(16);
     let newResult = "";
-    for (char of result) { // Caesar cipher
+    for (let char of result) { // Caesar cipher
         const index = hexSymbols.indexOf(char) + key;
         newResult += hexSymbols[index % 16];
     }
@@ -69,7 +69,7 @@ function decrypt(code, key) {
     const [keyInt, keyFract] = key.split(".");
 
     code = "0".repeat(keyFract) + BigInt(code).toString(16);
-    for (char of code) {
+    for (let char of code) {
         const index = hexSymbols.indexOf(char) - keyInt;
         result += hexSymbols[(index + 16) % 16]; // if keyInt > ind
     }
@@ -101,4 +101,5 @@ function decrypt(code, key) {
     return result;
 }
 
-console.log(decrypt("2296390609674970032243855431724607297762", 1));
+
+export {encrypt, decrypt};
