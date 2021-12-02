@@ -1,4 +1,4 @@
-import * as cipher from "./KruASeCoder.js";
+import * as cipher from "./_js/KruASeCoder.js";
 
 
 let textField = document.querySelector(".text-input");
