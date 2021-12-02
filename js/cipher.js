@@ -20,6 +20,8 @@ encryptButton.onclick = function() {
 
     codeField.value = code;
     keyField.value = Number(key);
+
+    warningLabel.style.visibility = "hidden";
 }
 
 decryptButton.onclick = function() {
@@ -37,5 +39,6 @@ decryptButton.onclick = function() {
     }
     // console.log("text: " + text);
     textField.value = text;
+
     warningLabel.style.visibility = "hidden";
 }
