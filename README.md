@@ -1,9 +1,9 @@
-# Cipher_Website
+# KruASe Website
 
-A website with common **HTML5 - CSS - JavaScript build** template
+My first fullstack website with common **HTML5-CSS-JavaScript** build template
 
-### You can encrypt and decrupt text using **my own cipher**!
+## KruASe Cipher
+### You can encrypt and decrypt text using **my multy-stage algorythm**!
 
-Uses not a very simple algorithm.  
 Functions are imported to `cipher.js` from another obfuscated file `KruASeCoder.js`.  
-The original code is in the file `KruASeCoder-normal.js` that is not on the hosting.
+The original code is in the file `KruASeCoder-normal.js` that is not on the hosting.  
