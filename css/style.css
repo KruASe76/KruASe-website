@@ -1,11 +1,18 @@
+@font-face {
+    font-family: JetBrains;
+    src: url("../fonts/JetBrainsMono-Regular.woff2") format("truetype");
+}
+
+
 img[alt="www.000webhost.com"] {
     display: none;
 }
 
 body {
-    font-family: "Arial", sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #222222;
     color: #dddddd;
+    padding-left: 1rem;
 }
 
 header {
@@ -13,30 +20,51 @@ header {
 }
 
 header h1 {
-    margin-top: 0;
+    margin-top: 1rem;
     margin-bottom: -20px;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    right: 1rem;
+article {
+    width: 70%;
+    border-top: 3px solid #888888;
+}
+article h2 {
+    margin-top: 0.5rem;
 }
 
-h3 {
-    margin-bottom: 5px;
+p {
+    width: 95%;
+}
+
+a {
+    font-family: JetBrains;
+    text-decoration: none;
+    color: #8d08d2;
+    border: 1px solid #222222;
+    border-radius: 3px;
+    transition-duration: 0.3s;
+}
+a:hover {
+    border-color: #8d08d2;
+}
+a:visited {
+    color: #8d08d2;
+}
+
+footer {
+    text-align: right;
+    position: relative;
+    right: 0.5rem;
+    margin-top: 3rem;
 }
 
 button {
     background-color: #3a3a3a;
     color: #eeeeee;
     font-size: 1rem;
-    width: 8rem;
-    height: 3rem;
     border-radius: 2px;
     border: none;
     border-color: #3a3a3a; /* To delete flush on hover */
-    margin-top: 5px;
     cursor: pointer;
     transition-duration: 0.2s;
 }
@@ -50,30 +78,19 @@ button:active {
     border-color: #3a3a3a; /* To delete flush on turning unactive */
 }
 
-.warning-label {
-    color: #ff4444;
-    font-size: 1rem;
-    margin-left: 0.5rem;
-    text-align: center;
-    visibility: hidden;
-}
-
 .input-field {
     background-color: #3a3a3a;
     color: #eeeeee;
-    font-family: initial;
+    font-family: JetBrains;
     border-radius: 2px;
     border: 1px solid #666666;
     outline: none;
     transition-duration: 0.2s;
 }
 .input-field:focus {
-    border: 1px solid #aaaaaa;
+    border: 1px solid #8d08d2;
 }
 
-input {
-    width: 15rem;
-}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;

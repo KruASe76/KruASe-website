@@ -1,3 +1,6 @@
+import * as cipher from "./KruASeCoder.js";
+
+
 let textField = document.querySelector(".text-input");
 let codeField = document.querySelector(".code-input");
 let keyField = document.querySelector(".key-input");
@@ -7,32 +10,35 @@ let decryptButton = document.querySelector(".decrypt-button");
 
 let warningLabel = document.querySelector(".warning-label");
 
-encryptButton.onclick = async function() {
-    let text = textField.value;
+encryptButton.onclick = function() {
+    const text = textField.value;
     // console.log("text: " + text);
 
-    let [code, key] = await eel.encode_py(text)();
+    const [code, key] = cipher.encrypt(text);
     // console.log("code: " + code);
     // console.log("key: " + key);
 
     codeField.value = code;
-    keyField.value = parseFloat(key);
+    keyField.value = Number(key);
+
+    warningLabel.style.visibility = "hidden";
 }
 
-decryptButton.onclick = async function() {
-    let code = codeField.value;
-    let key = keyField.value;
+decryptButton.onclick = function() {
+    const code = codeField.value;
+    const key = keyField.value;
     // console.log("code: " + code);
     // console.log("key: " + key);
 
+    let text;
     try {
-        await eel.decode_py(code, key)(); // if i define "text" here, it dont work
+        text = cipher.decrypt(code, key);
     } catch (err) {
         warningLabel.style.visibility = "visible";
         return;
     }
-    let text = await eel.decode_py(code, key)()
     // console.log("text: " + text);
     textField.value = text;
+
     warningLabel.style.visibility = "hidden";
 }

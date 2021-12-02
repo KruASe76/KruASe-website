@@ -1,8 +1,9 @@
-# Cipher_Website
+# KruASe Website
 
-A website where you can encrypt and decrupt text using **my own cipher**!
+My first fullstack website with common **HTML5-CSS-JavaScript** build template
 
-Main template: Python3 eel module  
-Web: HTML - CSS - JavaScript (with eel)
+## KruASe Cipher
+### You can encrypt and decrypt text using **my multy-stage algorythm**!
 
-Uses Python v3.9 virtual environment
+Functions are imported to `cipher.js` from another obfuscated file `KruASeCoder.js`.  
+The original code is in the file `KruASeCoder-normal.js` that is not on the hosting.  
