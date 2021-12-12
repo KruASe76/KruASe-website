@@ -1,9 +1,29 @@
+div.container {
+    width: 60%;
+}
+
+div.flexbox {
+    width: calc(100% + 0.35rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.cp-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+}
+
 h3 {
-    margin-bottom: 5px;
+    display: flex;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
 }
 
 textarea {
-    width: 80%;
+    margin-top: 0.3rem;
+    width: 100%;
 }
 
 input {
@@ -15,11 +35,23 @@ button {
     height: 3rem;
     margin-top: 5px;
 }
+button.copy, button.paste {
+    width: 3.5em;
+    height: 1.7em;
+    margin-left: 0.2rem;
+}
 
-.warning-label {
+#warning-label {
     color: #ff4444;
     font-size: 1rem;
     margin-left: 0.5rem;
     text-align: center;
     visibility: hidden;
+}
+
+
+@media (max-width: 800px) {
+    div.container {
+        width: 99%;
+    }
 }

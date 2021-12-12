@@ -12,60 +12,82 @@
 
   <body>
     <header>
-      <h1><a href=".">KruASe</a> Website</h1>
-      <h4>My first own-created fullstack website</h4>
+      <h1><a href="/">KruASe</a> Website</h1>
+      <h4>Only fullstack website I have created so far</h4>
     </header>
-
+    <hr noshade>
     <main>
-      <article>
+      <article class="standard">
         <h2>Hello, World!</h2>
         <p>
-          I'm KruASe, a hobbyist in programming, but, I think, it will be my profession. Mostly I use Python3 and
-          I am a back-end programmwer at all, but recently I started learning web and foound it quite exciting!<br>
-          That's why I created this fullstack website.
+          I'm KruASe, a hobbyist in programming, but, I think, it will be my profession. I mainly use Python3 and
+          I am a back-end programmer, but recently I have started learning web and have found it quite exciting!<br>
+          That's why I have created this website.
         </p>
       </article>
-
-      <article>
+      <hr noshade>
+      <article class="standard">
         <h2>What is on this website?</h2>
         <p>
-          Well, I will regularly update it adding new pages. The site is a kind of portfolio of small web apps.
+          Well, I will regularly update it by adding new pages. The site is a useless thing masquerading as
+          my portfolio of small web apps.
         </p>
 
         <section class="page">
           <h3><a href="cipher/">KruASe Cipher</a></h3>
           <p>
-            One time I was keenly interested in encoding/decoding to/from binary/hex. As much as I decided to invent
-            my own cipher. But it's rather a multy-stage ecrypting algorythm than a cipher... However, check it!
+            One time I was keenly interested in encoding/decoding to/from binary/hex. So much as I decided to make
+            my own cipher. But it's rather a multy-stage encrypting algorythm than a cipher... Anyway, check it!
           </p>
         </section>
 
-        <section class="page dev">
-          <h3>My class schedule [RU]</h3>
+        <section class="page">
+          <h3><a href="schedule/">My class schedule</a> <span class="accent">[RU]</span></h3>
           <p>
-            In development
+            The schedule of my class that changes too often brang to my mind to make a shedule that will be accessible
+            from everywhere and up to date almost always in one place. So, I made this. The schedule that is easy to
+            change because of dynamic filling with names of subjects that depends on table cells classes. On Wednesday
+            my class is divided into two groups, and each of them has its own schedule. So, I added a button that
+            swithes the group and edits the schedule, and selected status is saved and keeps even after browser closing.
           </p>
         </section>
 
         <section class="page dev">
+          <h3>CodenamesBot (<a href="https://discord.com/developers" target="_blank">Discord</a>)</h3>
+          <p>
+            In development since May.. Yeah... <br>
+            <span class="accent"><b>Planned to release before 2022!</b></span>
+          </p>
+        </section>
+
+        <section class="page dev dead">
           <h3>Countdown to the New Year</h3>
           <p>
-            In development
+            App will not be released :(
+          </p>
+        </section>
+
+        <section class="page accent">
+          <h3>Moving website to Django (Python3)</h3>
+          <p>
+            The next big update for my site will be moving it to another platform - Python3 framework Django.
+            Firstly this site was created using common HTML5 - CSS - JS template, but now I want to gain experience
+            making website with Django. But the higher priority plan is to finish CodenamesBot
           </p>
         </section>
       </article>
-
-      <article>
+      <hr noshade>
+      <article class="standard">
         <h2>Service links</h2>
         <h3 class="link"><a href="https://github.com/KruASe76" target="_blank">GitHub</a></h3>
         <h3 class="link"><a href="https://replit.com/@KruASe" target="_blank">Replit</a></h3>
       </article>
-
-      <article>
+      <hr noshade>
+      <article class="standard">
         <h2>Contact me</h2>
         <p>
-          If you want to send any feedback about my website, <b><u>ecpecially if you have design suggestions
-            or found any issues</u></b>
+          If you want to send any feedback about my website, <b><u>especially if you have design suggestions
+            or have found any issues</u></b>
           you can message me:
         </p>
         <h3 class="link">Telegram: <a href="https://t.me/KruASe" target="_blank">@KruASe</a></h3>
@@ -73,7 +95,14 @@
     </main>
 
     <footer>
-      <h4>© KruASe, 2021</h4>
+      <div class="for-egg">
+        <h4 class="egg">
+          <a href="https://www.myinstants.com/media/instants_images/shrek.jpg.pagespeed.ce.LfIaAjnFH5.jpg" target="_blank">
+            Do not click this
+          </a>
+        </h4>
+        <h4>© KruASe, 2021</h4>
+      </div>
     </footer>
   </body>
 </html>

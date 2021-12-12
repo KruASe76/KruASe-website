@@ -1,14 +1,14 @@
 import * as cipher from "./_js/KruASeCoder.js";
 
 
-let textField = document.querySelector(".text-input");
-let codeField = document.querySelector(".code-input");
-let keyField = document.querySelector(".key-input");
+const textField = document.querySelector("#text-input");
+const codeField = document.querySelector("#code-input");
+const keyField = document.querySelector("#key-input");
 
-let encryptButton = document.querySelector(".encrypt-button");
-let decryptButton = document.querySelector(".decrypt-button");
+const encryptButton = document.querySelector("#encrypt-button");
+const decryptButton = document.querySelector("#decrypt-button");
 
-let warningLabel = document.querySelector(".warning-label");
+const warningLabel = document.querySelector("#warning-label");
 
 encryptButton.onclick = function() {
     const text = textField.value;
@@ -42,3 +42,12 @@ decryptButton.onclick = function() {
 
     warningLabel.style.visibility = "hidden";
 }
+
+
+const copyText = document.querySelector("#copy-text");
+const pasteText = document.querySelector("#paste-text");
+const copyCode = document.querySelector("#copy-code");
+const pasteCode = document.querySelector("#paste-code");
+
+// warning on empty!!
+// wipe default warning-label value!!

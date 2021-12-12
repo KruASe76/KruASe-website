@@ -1,0 +1,39 @@
+body {
+    padding-left: 0;
+}
+
+header {
+    text-align: center;
+}
+
+table, th, td {
+    text-align: center;
+    border: 0.1rem solid #dddddd;
+    border-collapse: collapse;
+}
+table {
+    width: 100%;
+}
+tr {
+    height: 3em;
+}
+.t-head {
+    height: 2em;
+}
+.number {
+    width: 2em;
+}
+.time {
+    width: 10em;
+}
+.day {
+    width: 20em;
+}
+.optional {
+    color: #888888;
+}
+
+button {
+    width: 8rem;
+    height: 3rem;
+}

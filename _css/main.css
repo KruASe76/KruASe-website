@@ -24,9 +24,8 @@ header h1 {
     margin-bottom: -20px;
 }
 
-article {
+article.standard {
     width: 70%;
-    border-top: 3px solid #888888;
 }
 article h2 {
     margin-top: 0.5rem;
@@ -36,26 +35,31 @@ p {
     width: 95%;
 }
 
-a {
-    font-family: JetBrains;
-    text-decoration: none;
-    color: #8d08d2;
-    border: 1px solid #222222;
-    border-radius: 3px;
-    transition-duration: 0.3s;
-}
-a:hover {
-    border-color: #8d08d2;
-}
-a:visited {
-    color: #8d08d2;
-}
-
 footer {
     text-align: right;
     position: relative;
     right: 0.5rem;
     margin-top: 3rem;
+}
+
+hr {
+    color: #dddddd;
+    size: 0.1rem;
+}
+
+a {
+    font-family: JetBrains;
+    text-decoration: none;
+    color: #a008d2;
+    border: 1px solid #222222;
+    border-radius: 3px;
+    transition-duration: 0.3s;
+}
+a:hover {
+    border-color: #a008d2;
+}
+a:visited {
+    color: #a008d2;
 }
 
 button {
@@ -67,6 +71,7 @@ button {
     border-color: #3a3a3a; /* To delete flush on hover */
     cursor: pointer;
     transition-duration: 0.2s;
+    outline: none !important;
 }
 button:hover {
     background-color: #222222;
@@ -76,6 +81,9 @@ button:active {
     background-color: #444444;
     border: none;
     border-color: #3a3a3a; /* To delete flush on turning unactive */
+}
+button::-moz-focus-inner {
+    border: none;
 }
 
 .input-field {
@@ -88,11 +96,28 @@ button:active {
     transition-duration: 0.2s;
 }
 .input-field:focus {
-    border: 1px solid #8d08d2;
+    border: 1px solid #a008d2;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+span.accent {
+    color: #ffa000;
+}
+
+
+@media (max-width: 800px) {
+    body {
+        padding-left: 0;
+    }
+    article.standard {
+        width: 100%;
+    }
+    p {
+        width: 100%;
+    }
 }

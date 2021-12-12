@@ -12,31 +12,44 @@
 
   <body>
     <header>
-      <h1><a href="../">KruASe</a> Cipher</h1>
+      <h1><a href="/">KruASe</a> Cipher</h1>
       <h4><i>A very strong cipher, no one can decrypt it</i></h4>
     </header>
-
+    <hr noshade>
     <main>
-      <article>
-        <h3>Input text to encrypt here</h3>
-        <textarea class="input-field text-input" rows="8"></textarea>
+      <div class="container">
+        <div class="flexbox">
+          <h3>Input text to encrypt here</h3>
+          <div class="cp-buttons">
+            <button id="copy-text" class="copy">Copy</button>
+            <button id="paste-text" class="paste">Paste</button>
+          </div>
+        </div>
+        <textarea id="text-input" class="input-field" rows="8"></textarea>
         <br>
-        <button class="encrypt-button">Encrypt</button>
-        <button class="decrypt-button">Decrypt</button>
-        <label class="warning-label"><i>Invalid code or/and key</i></label>
+        <button id="encrypt-button">Encrypt</button>
+        <button id="decrypt-button">Decrypt</button>
+        <label id="warning-label"><i>Invalid code or/and key</i></label>
         <br>
-        <h3>Input encrypted text and the key to decrypt here</h3>
-        <textarea class="input-field code-input" rows="15"></textarea>
+        <div class="flexbox">
+          <h3>Input encrypted text and the key to decrypt here</h3>
+          <div class="cp-buttons">
+            <button id="copy-key" class="copy">Copy</button>
+            <button id="paste-key" class="paste">Paste</button>
+          </div>
+        </div>
+        <textarea id="code-input" class="input-field" rows="15"></textarea>
         <br>
-        <label for="key"><b>Key:</b></label>
-        <input class="input-field key-input" id="key" type="number">
-      </article>
+        <label for="key-input"><b>Key:</b></label>
+        <input id="key-input" type="number" class="input-field">
+      </div>
     </main>
 
     <footer>
       <h4>© KruASe, 2021</h4>
     </footer>
 
+    <script src="_js/clipboard.min.js"></script>
     <script src="script.js" type="module"></script>
   </body>
 </html>
