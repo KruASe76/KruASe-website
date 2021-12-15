@@ -59,6 +59,7 @@ let group;
 if (getCookie("group") === undefined) {
 	group = 0;
 	setCookie("group", group, 60*60*24*30*365*3); // three years
+	groupLabel.textContent = `Текущая группа: ${group + 1}`;
 } else {
 	group = Number(getCookie("group"));
 	for (let i = 0; i < group; i++) {

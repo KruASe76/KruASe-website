@@ -9,9 +9,10 @@ img[alt="www.000webhost.com"] {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Roboto, sans-serif;
     background-color: #222222;
     color: #dddddd;
+    position: absolute;
     padding-left: 1rem;
 }
 
