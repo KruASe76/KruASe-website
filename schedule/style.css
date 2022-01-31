@@ -1,19 +1,26 @@
 body {
     position: absolute;
-    padding-left: 0;
+    margin: 0;
 }
 
 header {
+    margin: 0;
+}
+
+h2, h3 {
     text-align: center;
 }
 
 table, th, td {
-    text-align: center;
-    border: 0.1rem solid #dddddd;
+    border: 0.1rem solid #666666;
     border-collapse: collapse;
 }
 table {
     width: 100%;
+}
+th, td {
+    text-align: center;
+    align-items: center;
 }
 tr {
     height: 3em;
@@ -33,8 +40,57 @@ tr {
 .optional {
     color: #888888;
 }
+td a {
+    display: inline-flex;
+    height: 2.5rem;
+    width: 98.5%;
+    font-family: inherit;
+    justify-content: center;
+    align-items: center;
+    border-width: 2px;
+    margin: 0;
+    padding: 0;
+}
+td a:hover {
+    border-color: #a008d2;
+}
+td.day.eng div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+td.day.eng div p {
+    grid-column: 1 / 4;
+    width: 100%;
+    margin: 0;
+}
+td.day.eng div a {
+    height: min-content;
+    width: 95%;
+}
 
-button {
+
+#switch-button {
     width: 8rem;
     height: 3rem;
+}
+
+.boards {
+    margin-top: 5rem;
+}
+.boards .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.boards .buttons button {
+    width: 6rem;
+    height: 2.5rem;
+    margin: 0 0.3rem;
+}
+
+
+@media (max-width: 800px) {
+    td a {
+        height: 5rem;
+    }
 }
