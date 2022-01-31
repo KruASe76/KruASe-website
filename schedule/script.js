@@ -4,36 +4,36 @@ const groupLabel = document.querySelector("#group-label");
 
 function fillCells() {
 	for (let cell of cells) {
-		if (cell.classList.contains("alg"))      cell.textContent = "Алгебра";
-		if (cell.classList.contains("geom"))     cell.textContent = "Геометрия";
-		if (cell.classList.contains("phys"))     cell.textContent = "Физика";
-		if (cell.classList.contains("inf"))      cell.textContent = "Информатика";
-		if (cell.classList.contains("chem"))     cell.textContent = "Химия";
-		if (cell.classList.contains("rus"))      cell.textContent = "Русский язык";
-		if (cell.classList.contains("eng"))      cell.textContent = "Английский язык";
-		if (cell.classList.contains("hist"))     cell.textContent = "История";
-		if (cell.classList.contains("social"))   cell.textContent = "Обществознание";
-		if (cell.classList.contains("geog"))     cell.textContent = "География";
-		if (cell.classList.contains("bio"))      cell.textContent = "Биология";
-		if (cell.classList.contains("lit"))      cell.textContent = "Литература";
-		if (cell.classList.contains("pe"))       cell.textContent = "Физкультура";
-		if (cell.classList.contains("lyc-hour")) cell.textContent = "Лицейский час";
+		if (cell.classList.contains("alg"))      cell.innerHTML = "<a href=\"https://meet.google.com/beg-sqeq-tyg\" target=\"_blank\">Алгебра</a>";
+		if (cell.classList.contains("geom"))     cell.innerHTML = "<a href=\"https://meet.google.com/ezo-zfyi-kwx\" target=\"_blank\">Геометрия</a>";
+		if (cell.classList.contains("phys"))     cell.innerHTML = "<a href=\".\">Физика</a>";
+		if (cell.classList.contains("inf"))      cell.innerHTML = "<a href=\".\">Информатика</a>";
+		if (cell.classList.contains("chem"))     cell.innerHTML = "<a href=\".\">Химия</a>";
+		if (cell.classList.contains("rus"))      cell.innerHTML = "<a href=\"https://meet.google.com/nzm-kupu-khp\" target=\"_blank\">Русский язык</a>";
+		if (cell.classList.contains("eng"))      cell.innerHTML = "<div><p>Английский язык</p><a href=\".\">Группа 1</a><a href=\".\">Группа 2</a><a href=\".\">Группа 3</a></div>";
+		if (cell.classList.contains("hist"))     cell.innerHTML = "<a href=\".\">История</a>";
+		if (cell.classList.contains("social"))   cell.innerHTML = "<a href=\".\">Обществознание</a>";
+		if (cell.classList.contains("geog"))     cell.innerHTML = "<a href=\".\">География</a>";
+		if (cell.classList.contains("bio"))      cell.innerHTML = "<a href=\".\">Биология</a>";
+		if (cell.classList.contains("lit"))      cell.innerHTML = "<a href=\".\">Литература</a>";
+		if (cell.classList.contains("pe"))       cell.innerHTML = "<a href=\".\">Физкультура</a>";
+		if (cell.classList.contains("lyc-hour")) cell.innerHTML = "<a href=\".\">Лицейский час</a>";
 
-		if (cell.classList.contains("sem"))      cell.textContent += "\n(семинар)";
-		if (cell.classList.contains("lect"))     cell.textContent += "\n(лекция)";
-		if (cell.classList.contains("oge"))      cell.textContent += "\n(подготовка к ОГЭ)";
-		if (cell.classList.contains("pract"))    cell.textContent += "\n(практикум)";
-		if (cell.classList.contains("spec"))     cell.textContent += "\n(спецкурс)";
-		if (cell.classList.contains("rewr"))     cell.textContent += "\n(переписывание работ)";
-		
-		cell.innerHTML = cell.innerHTML.replace(/\n/gi, '<br>');
+		if (cell.classList.contains("sem"))      cell.innerHTML = cell.innerHTML.slice(0, -4) + "<br>(семинар)";
+		if (cell.classList.contains("lect"))     cell.innerHTML = cell.innerHTML.slice(0, -4) + "<br>(лекция)";
+		if (cell.classList.contains("oge"))      cell.innerHTML = cell.innerHTML.slice(0, -4) + "<br>(подготовка к ОГЭ)";
+		if (cell.classList.contains("pract"))    cell.innerHTML = cell.innerHTML.slice(0, -4) + "<br>(практикум)";
+		if (cell.classList.contains("spec"))     cell.innerHTML = cell.innerHTML.slice(0, -4) + "<br>(спецкурс)";
+		if (cell.classList.contains("rewr"))     cell.innerHTML = cell.innerHTML.slice(0, -4) + "<br>(переписывание работ)";
+
+		if (cell.classList.value == "day alg oge") cell.innerHTML = "<a href=\"https://meet.google.com/beg-sqeq-tyg\" target=\"_blank\">Алгбебра<br>(подготовка к ОГЭ)</a>";
 	}
 }
 
 function changeClasses() {
 	const lessons = document.querySelectorAll(".sem");
-	for (lesson of lessons) {
-		if (lesson.classList.replace("rus", "inf")) continue;
+	for (let lesson of lessons) {
+		if (lesson.classList.replace("rus", "inf"))  continue;
 		if (lesson.classList.replace("inf", "geom")) continue;
 		if (lesson.classList.replace("geom", "rus")) continue;
 	}
@@ -77,4 +77,15 @@ switchButton.onclick = function() {
 	group = (group + 1) % 2;
 	setCookie("group", group, 60*60*24*30*365*3); // three years
 	groupLabel.textContent = `Текущая группа: ${group + 1}`;
+}
+
+
+const algBoard = document.querySelector("#alg-board");
+const physBoard = document.querySelector("#phys-board");
+
+algBoard.onclick = function() {
+	window.open("https://idroo.com/board-h6X3Jk2W0L");
+}
+physBoard.onclick = function() {
+	window.open("https://idroo.com/board-bprANv42NB");
 }
