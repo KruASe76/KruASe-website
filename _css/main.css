@@ -50,7 +50,7 @@ hr {
 a {
     font-family: JetBrains;
     text-decoration: none;
-    color: #a008d2;
+    color: #f36dff;
     border: 1px solid #222222;
     border-radius: 3px;
     transition-duration: 0.3s;
@@ -59,7 +59,7 @@ a:hover {
     border-color: #a008d2;
 }
 a:visited {
-    color: #a008d2;
+    color: #f36dff;
 }
 
 button {

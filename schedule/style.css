@@ -10,6 +10,9 @@ header {
 h2, h3 {
     text-align: center;
 }
+p {
+    margin: 0;
+}
 
 table, th, td {
     border: 0.1rem solid #666666;
@@ -54,18 +57,27 @@ td a {
 td a:hover {
     border-color: #a008d2;
 }
-td.day.eng div {
+td a[href="."] {
+    color: inherit;
+}
+td a[href="."]:hover {
+    border-color: #222222;
+    cursor: inherit;
+}
+td.eng div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-td.day.eng div p {
+td.eng div p {
     grid-column: 1 / 4;
     width: 100%;
-    margin: 0;
 }
-td.day.eng div a {
+td.eng div a {
     height: min-content;
     width: 95%;
+}
+td.alg a, td.rus a {
+    display: inline;
 }
 
 
