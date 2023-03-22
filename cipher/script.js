@@ -10,6 +10,7 @@ const decryptButton = document.querySelector("#decrypt-button");
 
 const warningLabel = document.querySelector("#warning-label");
 
+
 encryptButton.onclick = function() {
     const text = textField.value.trim();
     if (text === "") {
@@ -68,7 +69,7 @@ function copy(field1, field2 = undefined) {
     }
 
     const text = text2 ? text1 + "\nkey: " + text2 : text1;
-    
+
     const prom = navigator.clipboard.writeText(text);
     prom.then(() => {
         warningLabel.style.visibility = "hidden";
@@ -88,7 +89,7 @@ function paste(field1, field2 = undefined) {
         } else {
             field1.value = text;
         }
-        
+
         warningLabel.style.visibility = "hidden";
     });
     prom.catch(err => {

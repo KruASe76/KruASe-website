@@ -2,8 +2,11 @@ section.page, section.link {
     padding-left: 2rem;
     border-left: 5px solid #a008d2;
 }
-section.dev {
+section.wip {
     border-color: #666666;
+}
+section.archive {
+    border-color: #999999;
 }
 section.dead {
     color: #777777;
@@ -13,6 +16,7 @@ section.accent {
     border-color: #ffa000;
 }
 
+
 div.for-egg {
     display: flex;
     flex-direction: row;
@@ -21,6 +25,7 @@ div.for-egg {
 div.for-egg h4 {
     display: flex;
 }
+
 h4.egg {
     opacity: 0;
     transition-duration: 0.2s;

@@ -1,6 +1,44 @@
 const cells = document.querySelectorAll("td.day");
 const switchButton = document.querySelector("#switch-button");
-const groupLabel = document.querySelector("#group-label");
+const groupLabel = document.querySelector("#group-label");const algBoard = document.querySelector("#alg-board");
+const physBoard = document.querySelector("#phys-board");
+
+
+let group;
+if (getCookie("group") === undefined) {
+	group = 0;
+	setCookie("group", group, 60*60*24*30*365*3); // three years
+	groupLabel.textContent = `Текущая группа: ${group + 1}`;
+} else {
+	group = Number(getCookie("group"));
+	for (let i = 0; i < group; i++) {
+		changeClasses();
+	}
+	fillCells();
+	groupLabel.textContent = `Текущая группа: ${group + 1}`;
+}
+
+switchButton.onclick = function() {
+	for (let i = 0; i <= group; i++) {
+		changeClasses();
+	}
+	fillCells();
+	group = (group + 1) % 2;
+	setCookie("group", group, 60*60*24*30*365*3); // three years
+	groupLabel.textContent = `Текущая группа: ${group + 1}`;
+}
+
+
+algBoard.onclick = function() {
+	window.open("https://idroo.com/board-h6X3Jk2W0L");
+}
+physBoard.onclick = function() {
+	window.open("https://idroo.com/board-5s9pFPCinq");
+}
+
+
+fillCells();
+
 
 function fillCells() {
 	for (let cell of cells) {
@@ -32,6 +70,7 @@ function fillCells() {
 	}
 }
 
+
 function changeClasses() {
 	const lessons = document.querySelectorAll(".sem");
 	for (let lesson of lessons) {
@@ -40,8 +79,6 @@ function changeClasses() {
 		if (lesson.classList.replace("geom", "rus")) continue;
 	}
 }
-
-fillCells();
 
 
 function getCookie(name) {
@@ -55,39 +92,4 @@ function getCookie(name) {
 
 function setCookie(name, value, maxAge = undefined) {
 	document.cookie = `${name}=${value}` + ((maxAge === undefined) ? "" : `; max-age=${maxAge}`);
-}
-
-let group;
-if (getCookie("group") === undefined) {
-	group = 0;
-	setCookie("group", group, 60*60*24*30*365*3); // three years
-	groupLabel.textContent = `Текущая группа: ${group + 1}`;
-} else {
-	group = Number(getCookie("group"));
-	for (let i = 0; i < group; i++) {
-		changeClasses();
-	}
-	fillCells();
-	groupLabel.textContent = `Текущая группа: ${group + 1}`;
-}
-
-switchButton.onclick = function() {
-	for (let i = 0; i <= group; i++) {
-		changeClasses();
-	}
-	fillCells();
-	group = (group + 1) % 2;
-	setCookie("group", group, 60*60*24*30*365*3); // three years
-	groupLabel.textContent = `Текущая группа: ${group + 1}`;
-}
-
-
-const algBoard = document.querySelector("#alg-board");
-const physBoard = document.querySelector("#phys-board");
-
-algBoard.onclick = function() {
-	window.open("https://idroo.com/board-h6X3Jk2W0L");
-}
-physBoard.onclick = function() {
-	window.open("https://idroo.com/board-5s9pFPCinq");
 }
