@@ -1,0 +1,155 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+h1,
+h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.divText {
+  height: auto;
+  width: auto;
+  margin-left: 5px;
+  padding: 5px;
+  border-top: 1px solid black;
+}
+
+.lblText {
+  height: 5%;
+}
+
+textarea {
+  resize: none;
+  width: 99%;
+  padding: 10px;
+}
+
+#resultsArea {
+  margin-bottom: 10px;
+}
+
+#btnSendFiles,
+#btnSendText,
+#btnSendDb {
+  margin-top: 10px;
+}
+
+#btnSearch {
+  margin-bottom: 10px;
+}
+
+#btnPrevPage,
+#btnNextPage {
+  margin-bottom: 20px;
+}
+
+.divFiles {
+  width: auto;
+  height: auto;
+  margin-left: 5px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 5px;
+}
+
+.divResults {
+  width: auto;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.divChooseDb {
+  height: auto;
+  width: auto;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-top: 1px solid black;
+}
+
+#divLimit {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.divNewDb {
+  height: auto;
+  width: auto;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-left: 5px;
+  padding-left: 5px;
+  margin-top: 10px;
+  border-top: 1px solid black;
+}
+
+#selectLetter1,
+#selectLetter2 {
+  width: 50px;
+}
+
+select {
+  padding: 2px;
+}
+
+a {
+  margin: 10px;
+}
+
+#divExtraTags {
+  display: grid;
+  width: 80%;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  grid-template-columns: 300px 300px;
+}
+
+#divGrammarTags {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+#divExtraColumn1 {
+  grid-column: 1;
+}
+
+#divExtraColumn2 {
+  grid-column: 2;
+}
+
+#lblExtra {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#lblMain {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#btnReload {
+  margin-top: 5px;
+}
+
+#lblError {
+  color: red;
+}
+
+#lblStatusText,
+#lblStatusFiles {
+  margin-top: 1rem;
+}
+
+#inputDbName {
+  width: min(30rem, 95%);
+}

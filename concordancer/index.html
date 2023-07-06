@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Конкордансер - поиск</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="">
+
+  <h1>Конкордансер</h1>
+
+  <a href="addText.html">Загрузить файлы/текст</a>
+
+  <div class="divChooseDb">
+    <label>Выберите базу данных</label>
+    <br>
+    <select id="selectDb"></select>
+    <br>
+    <button id="btnReload" class="btn btn-info">Обновить список</button>
+  </div>
+
+  <div class="divResults">
+    <div class="divSearch">
+      <label>Искать по:</label>
+      <select id="selectSearchParam" onchange="selectSearchParamClicked()">
+        <option value="1">лемме</option>
+        <option value="2">словоформе</option>
+        <option value="3">грамматическим признакам</option>
+      </select>
+      <br>
+      <label id="lblEnterSearch">Введите лемму:</label>
+      <input id="inputSearch" type="text">
+
+      <div id="divLimit">
+        <label>Ограничения</label>
+        <br>
+        <label>От:</label>
+        <select id="selectLetter1">
+          <option value="А" selected>А</option>
+          <option value="Б">Б</option>
+          <option value="В">В</option>
+          <option value="Г">Г</option>
+          <option value="Д">Д</option>
+          <option value="Е">Е</option>
+          <option value="Ё">Ё</option>
+          <option value="Ж">Ж</option>
+          <option value="З">З</option>
+          <option value="И">И</option>
+          <option value="Й">Й</option>
+          <option value="К">К</option>
+          <option value="Л">Л</option>
+          <option value="М">М</option>
+          <option value="Н">Н</option>
+          <option value="О">О</option>
+          <option value="П">П</option>
+          <option value="Р">Р</option>
+          <option value="С">С</option>
+          <option value="Т">Т</option>
+          <option value="У">У</option>
+          <option value="Ф">Ф</option>
+          <option value="Х">Х</option>
+          <option value="Ц">Ц</option>
+          <option value="Ч">Ч</option>
+          <option value="Ш">Ш</option>
+          <option value="Щ">Щ</option>
+          <option value="Э">Э</option>
+          <option value="Ю">Ю</option>
+          <option value="Я">Я</option>
+        </select>
+        <label>До:</label>
+        <select id="selectLetter2">
+          <option value="А">А</option>
+          <option value="Б">Б</option>
+          <option value="В">В</option>
+          <option value="Г">Г</option>
+          <option value="Д">Д</option>
+          <option value="Е">Е</option>
+          <option value="Ё">Ё</option>
+          <option value="Ж">Ж</option>
+          <option value="З">З</option>
+          <option value="И">И</option>
+          <option value="Й">Й</option>
+          <option value="К">К</option>
+          <option value="Л">Л</option>
+          <option value="М">М</option>
+          <option value="Н">Н</option>
+          <option value="О">О</option>
+          <option value="П">П</option>
+          <option value="Р">Р</option>
+          <option value="С">С</option>
+          <option value="Т">Т</option>
+          <option value="У">У</option>
+          <option value="Ф">Ф</option>
+          <option value="Х">Х</option>
+          <option value="Ц">Ц</option>
+          <option value="Ч">Ч</option>
+          <option value="Ш">Ш</option>
+          <option value="Щ">Щ</option>
+          <option value="Э">Э</option>
+          <option value="Ю">Ю</option>
+          <option value="Я" selected>Я</option>
+        </select>
+        <!--<button class="btn btn-primary" id="btnLimit">Установить ограничения</button>-->
+      </div>
+
+      <div id="divGrammarTags">
+        <label id="lblMain">Основные характеристики</label>
+        <br>
+        <label>Часть речи: </label>
+        <select id="selectPartOfSpeech">
+          <option></option>
+          <option value="S">Существительное</option>
+          <option value="V">Глагол</option>
+          <option value="A">Прилагательное</option>
+          <option value="ADV">Наречие</option>
+          <option value="NUM">Количественное числительное</option>
+          <option value="ANUM">Порядковое числительное</option>
+          <option value="SPRO">Местоимение (существительное)</option>
+          <option value="APRO">Местоимение (прилагательное)</option>
+          <option value="ADVPRO">Местоимение (наречие)</option>
+          <option value="PART">Частица</option>
+          <option value="PR">Предлог</option>
+          <option value="CONJ">Союз</option>
+          <option value="INTJ">Междометие</option>
+          <option value="COM">Часть фразеологизма</option>
+        </select>
+        <br>
+        <label>Число:</label>
+        <select id="selectNumber">
+          <option></option>
+          <option value="ед">Единственное</option>
+          <option value="мн">Множественное</option>
+        </select>
+        <br>
+        <label>Род:</label>
+        <select id="selectGender">
+          <option></option>
+          <option value="муж">Мужской</option>
+          <option value="жен">Женский</option>
+          <option value="сред">Средний</option>
+        </select>
+        <br>
+        <label>Падеж:</label>
+        <select id="selectCase">
+          <option></option>
+          <option value="им">Именительный</option>
+          <option value="род">Родительный</option>
+          <option value="дат">Дательный</option>
+          <option value="вин">Винительный</option>
+          <option value="твор">Творительный</option>
+          <option value="пр">Предложный</option>
+          <option value="парт">Партитивный</option>
+          <option value="местн">Локативный</option>
+          <option value="зват">Звательный</option>
+        </select>
+        <br>
+        <label>Время:</label>
+        <select id="selectTime">
+          <option></option>
+          <option value="прош">Прошедшее</option>
+          <option value="наст">Настоящее</option>
+          <option value="непрош">Будущее</option>
+        </select>
+        <br>
+        <label>Тип:</label>
+        <select>
+          <option id="selectType"></option>
+          <option value="прич">Причастие</option>
+          <option value="деепр">Деепричастие</option>
+          <option value="инф">Инфинитив</option>
+          <option value="изъяв">Изъявительное наклонение</option>
+          <option value="пов">Повелительное наклонение</option>
+        </select>
+        <br>
+        <label>Форма:</label>
+        <select id="selectForm">
+          <option></option>
+          <option value="полн">Полная</option>
+          <option value="кр">Краткая</option>
+          <option value="притяж">Притяжательная</option>
+        </select>
+        <br>
+        <label id="lblExtra">Дополнительные характеристики</label>
+        <div id="divExtraTags">
+          <div id="divExtraColumn1">
+            <input id="checkName" class="check" value="имя" type="checkbox">
+            <label>Имя</label>
+
+            <br>
+            <input id="checkSurname" value="фам" type="checkbox">
+            <label>Фамилия</label>
+
+            <br>
+            <input id="checkPatronim" value="отч" class="check" type="checkbox">
+            <label>Отчество</label>
+
+            <br>
+            <input id="checkGeographic" value="гео" class="check" type="checkbox">
+            <label>Географическое название</label>
+
+            <br>
+            <input id="checkUnknown" value="мж" class="check" type="checkbox">
+            <label>Общая форма (муж. и жен.)</label>
+
+            <br>
+            <input id="checkInformal" value="разг" class="check" type="checkbox">
+            <label>Разговорное слово</label>
+
+            <br>
+            <input id="checkShort" value="сокр" class="check" type="checkbox">
+            <label>Сокращение</label>
+          </div>
+
+          <div id="divExtraColumn2">
+            <input id="checkObsolete" value="устар" class="check" type="checkbox">
+            <label>Устаревшее слово</label>
+
+            <br>
+            <input id="checkObscene" value="обсц" class="check" type="checkbox">
+            <label>Обсценная лексика</label>
+
+            <br>
+            <input id="checkAwkward" value="затр" class="check" type="checkbox">
+            <label>Затруднено формообразование</label>
+
+            <br>
+            <input id="checkDistorted" value="искаж" class="check" type="checkbox">
+            <label>Искаженная форма</label>
+
+            <br>
+            <input id="checkRare" value="редк" class="check" type="checkbox">
+            <label>Редкое слово</label>
+
+            <br>
+            <input id="checkIntro" value="вводн" class="check" type="checkbox">
+            <label>Вводное слово</label>
+
+            <br>
+            <input id="checkPredicate" value="прдк" class="check" type="checkbox">
+            <label>Предикатив</label>
+          </div>
+        </div>
+      </div>
+      <br>
+      <button id="btnSearch" class="btn btn-primary">Искать</button>
+    </div>
+    <textarea id="resultsArea" rows="20" readonly></textarea>
+    <br>
+    <label>Текущая страница: </label>
+    <label id="lblPage">1/1</label>
+    <br>
+    <button class="btn btn-primary" id="btnPrevPage">Предыдущая страница</button>
+    <button class="btn btn-primary" id="btnNextPage">Следующая страница</button>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+
+</html>
