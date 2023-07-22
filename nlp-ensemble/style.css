@@ -75,7 +75,7 @@ section {
 #sectCloserOnes
 {
   border-top: 1px solid black;
-  margin-top: 1.5%;
+  margin-top: 1%;
   padding-bottom: 4%;
 }
 
@@ -322,8 +322,8 @@ select {
 
 #divNGrams
 {
-  margin-top: 2%;
-  padding-top: 2%;
+  margin-top: 1%;
+  padding-top: 1%;
   border-top: 1px solid black;
 }
 
@@ -358,7 +358,7 @@ select {
 #divSeveralWords
 {
   display: block;
-  margin-top: 1.5%;
+  margin-top: 1%;
   width: fit-content;
   text-align: center;
 }
@@ -413,8 +413,8 @@ select {
 
 #divFirstWord
 {
-  margin-top: 2%;
-  padding-top: 2%;
+  margin-top: 1%;
+  padding-top: 1%;
   border-top: 1px solid black;
 }
 
