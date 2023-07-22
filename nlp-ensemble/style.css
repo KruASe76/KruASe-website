@@ -1,0 +1,513 @@
+html, body, #BODY {
+  height: 100%;
+  width: 100%;
+}
+
+#shrek
+{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  outline: none;
+}
+
+.shrek body {
+  background-image: url("shrek.png");
+  background-size: cover;
+}
+
+.shrek #BODY {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.shrek section,
+div,
+textarea
+{
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.shrek textarea,
+.INPUT,
+select,
+option
+{
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+h1,
+h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+section {
+  display: none;
+}
+
+#divSections {
+  padding-top: 1%;
+  border-top: 1px solid black;
+  margin-top: 1.5rem;
+  padding-inline: 1%;
+}
+
+.divMenu {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.divMenu button {
+  width: 32%;
+}
+
+#divSections .divMenu button {
+  width: 49%;
+}
+
+#sectSemantic .divMenu button {
+  width: 32%;
+}
+
+#sectCloserOnes
+{
+  border-top: 1px solid black;
+  margin-top: 1.5%;
+  padding-bottom: 4%;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  padding: 1%;
+}
+
+#divExtraTags {
+  display: grid;
+  width: 80%;
+  grid-template-columns: 300px 300px;
+}
+
+#divGrammarTags {
+  display: none;
+  width: 100%;
+  height: auto;
+  margin-top: 1%;
+}
+
+#divExtraColumn1 {
+  grid-column: 1;
+}
+
+#divExtraColumn2 {
+  grid-column: 2;
+}
+
+#lblMain,
+#lblLimit {
+  font-size: 20px;
+  margin-bottom: 1%;
+}
+
+#btnReload {
+  margin-top: 0.5%;
+}
+
+#lblError {
+  color: red;
+}
+
+#lblStatusText,
+#lblStatusFiles {
+  margin-top: 0.5rem;
+}
+
+#lblStatusText
+{
+  display: block;
+}
+
+#lblEnterSearch {
+  display: block;
+}
+
+#inputDbName {
+  width: min(30rem, 95%);
+}
+
+#resultsArea {
+  margin-bottom: 1%;
+}
+
+#btnSendFiles,
+#btnSendText,
+#btnSendDb {
+  margin-top: 1%;
+}
+
+#btnSearch {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+#btnPrevPage,
+#btnNextPage {
+  margin-bottom: 2%;
+}
+
+.divFiles1 {
+  margin-top: 1%;
+  width: auto;
+  height: auto;
+}
+
+.divResults {
+  border-top: 1px solid black;
+  width: auto;
+  padding-top: 1%;
+}
+
+.divChooseDb {
+  height: auto;
+  width: auto;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  margin-top: 1%;
+  border-top: 1px solid black;
+}
+
+#divLimit {
+  display: none;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-top: 1%;
+}
+
+#lblStatusFiles1
+{
+  display: block;
+}
+
+#inputCloseWordsNumber
+{
+  width: 3.5rem;
+}
+
+input:not(.inputFile) {
+  border: 1px solid black;
+  padding-left: 3px;
+}
+
+.divNewDb {
+  height: auto;
+  width: auto;
+  margin-bottom: 1.5%;
+  padding-top: 1%;
+  margin-top: 1%;
+  border-top: 1px solid black;
+}
+
+#selectLetter1,
+#selectLetter2 {
+  width: 50px;
+}
+
+select {
+  padding: 2px;
+}
+
+.divText {
+  padding-top: 1%;
+  height: auto;
+  width: auto;
+  border-top: 1px solid black;
+}
+
+.lblText {
+  height: 5%;
+}
+
+#lblExtra {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.divResults1 {
+  border-top: 1px solid black;
+  width: auto;
+  margin-top: 1%;
+}
+
+.divText1 {
+  height: auto;
+  width: auto;
+  padding-bottom: 2%;
+}
+
+#divDependency
+{
+  margin-top: 0.5%;
+}
+
+#divLemma
+{
+  margin-top: 1%;
+}
+
+#results
+{
+  margin-left: 1%;
+  margin-top: 1%;
+  width: 90%;
+  border: 1px solid black;
+  overflow-wrap: normal;
+}
+
+#btnSubmit1,
+#btnSubmit2
+{
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+#btnSearch1
+{
+  margin-top: 0.5%;
+  margin-bottom: 2%;
+}
+
+#searchArea
+{
+  margin-bottom: 3%;
+}
+
+#divChooseSearchFiles
+{
+  margin-top: 1%;
+}
+
+#lblStatusFilesNGrams
+{
+  display: block;
+}
+
+#divResultConc,
+#divResultSyntax
+{
+  margin-top: 1%;
+}
+
+#divResultConc
+{
+  margin-top: 1.5%;
+}
+
+#lblError2,
+#lblError1
+{
+  color: red;
+}
+
+#lblChooseFilesBlock
+{
+  display: block;
+}
+
+#divNGrams
+{
+  margin-top: 2%;
+  padding-top: 2%;
+  border-top: 1px solid black;
+}
+
+#lblNumberNGrams
+{
+  margin-top: 0.5%;
+}
+
+#sectNumberNGrams
+{
+  margin-top: 0.5%;
+}
+
+#divFilesNGrams
+{
+  margin-bottom: 1%;
+}
+
+#btnSearchNGrams
+{
+  margin-top: 1%;
+}
+
+.divFiles {
+  padding-top: 1%;
+  margin-top: 1%;
+  width: auto;
+  height: auto;
+  border-top: 1px solid black;
+}
+
+#divSeveralWords
+{
+  display: block;
+  margin-top: 1.5%;
+  width: fit-content;
+  text-align: center;
+}
+
+#phantomSVG
+{
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  cursor: default;
+}
+
+#lblCloseNumber
+{
+  margin-top: 1.5%;
+}
+
+#btnSearchCloseWords
+{
+  margin-top: 1%;
+}
+
+#btnAddMinusWord,
+#btnAddPlusWord
+{
+  border: none;
+  outline: none;
+  color: green;
+  background-color: rgba(0, 0, 0, 0);
+  margin-top: 0.5%;
+  margin-bottom: 1.5%;
+}
+
+#lblPlusWords,
+#lblMinusWords
+{
+  display: block;
+  margin-bottom: 0.5%;
+}
+
+#divPlusWords,
+#divMinusWords
+{
+  text-align: left;
+}
+
+#divMinusWords
+{
+  margin-top: 1.5%;
+}
+
+#divFirstWord
+{
+  margin-top: 2%;
+  padding-top: 2%;
+  border-top: 1px solid black;
+}
+
+#divSecondWord
+{
+  margin-top: 2%;
+}
+
+#btnCompare
+{
+  margin-top: 2%;
+}
+
+#divShowComparison
+{
+  margin-top: 3%;
+  padding: 5px;
+  border: 1px solid black;
+  width: fit-content;
+}
+
+#lblComparisonResult
+{
+  margin: 0px;
+}
+
+#lblIdiotCompare
+{
+  display: block;
+  color: red;
+}
+
+#lblIdiotCloseWords
+{
+  display: block;
+  color: red;
+}
+
+#divSearchNGrams
+{
+  margin-bottom: 3%;
+}
+
+#areaNGrams
+{
+  height: 60vh;
+  margin-bottom: 2%;
+}
+
+#divDefault
+{
+  display: inline;
+}
+
+#table
+{
+  margin-top: 2%;
+  text-align: center;
+  border: 1px solid black;
+}
+
+th
+{
+  padding: 2px;
+  padding-inline: 4px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+td
+{
+  border-left: 1px solid black;
+  padding: 2px;
+  padding-inline: 4px;
+}
+
+
+@media (max-width: 800px) {
+  .divMenu {
+    display: block;
+  }
+
+  .divMenu button {
+    display: block;
+    width: 100% !important;
+    margin-bottom: .5rem;
+  }
+
+  #divExtraColumn2 {
+    grid-column: 1;
+  }
+
+  #shrek {
+    display: none;
+  }
+}
