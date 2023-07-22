@@ -114,12 +114,7 @@ btnSearchCloseWords.onclick = async function() {
   const add = [];
   const subtract = [];
 
-  for (let i = 0; i < table.children.length; i++) {
-    if (table.children[i].tagName == "TR") {
-      table.removeChild(table.children[i]);
-      i--;
-    }
-  }
+  table.innerHTML = "<tr><th>Слово</th><th>Сходство с выражением</th></tr>";
 
   for (const child of divPlusWords.children)
   {
@@ -178,7 +173,7 @@ btnSearchCloseWords.onclick = async function() {
     const tr = document.createElement("tr");
     const td1 = document.createElement("td");
     const td2 = document.createElement("td");
-    td1.innerHTML = key;
+    td1.innerHTML = key.split("_")[0];
     td2.innerHTML = value;
     tr.appendChild(td1);
     tr.appendChild(td2);
