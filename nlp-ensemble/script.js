@@ -1,4 +1,4 @@
-const url = "http://3nmlc2lf1tktmf5peph2ey.webrelay.io";
+const url = "https://a5ba2b987afa9b.lhr.life";
 
 const searchButton = document.getElementById("btnSearch");
 const reloadDbButton = document.getElementById("btnReload")
