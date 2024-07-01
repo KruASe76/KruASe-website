@@ -54,7 +54,7 @@ btnSearch1.onclick = async function() {
 
   const responseJson = JSON.parse(
     await fetch(
-      "https://kruase.serveo.net/syntax/search",
+      `${url}/syntax/search`,
       {
         method: "POST",
         headers: {

@@ -142,7 +142,7 @@ btnSearchCloseWords.onclick = async function() {
 
   const responseJson = JSON.parse(
     await fetch(
-      "https://kruase.serveo.net/semantics/most_similar",
+      `${url}/semantics/most_similar`,
       {
         method: "POST",
         headers: {
@@ -197,7 +197,7 @@ btnCompare.onclick = async function() {
   lblComparisonResult.textContent = "Результат: ";
   const responseJson = JSON.parse(
     await fetch(
-      "https://kruase.serveo.net/semantics/similarity",
+      `${url}/semantics/similarity`,
       {
         method: "POST",
         headers: {
@@ -237,7 +237,7 @@ btnSearchNGrams.onclick = async function() {
 
   const responseJson = JSON.parse(
     await fetch(
-      `https://kruase.serveo.net/semantics/${selectNGrams.value}`,
+      `${url}/semantics/${selectNGrams.value}`,
       {
         method: "POST",
         headers: {

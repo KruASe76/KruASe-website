@@ -118,7 +118,7 @@ nextPageButton.onclick = function() {
 reloadDbButton.onclick = async function() {
   const dbNames = JSON.parse(
     await fetch(
-        "https://kruase.serveo.net/concordancer/db_names", {
+        `${url}/concordancer/db_names`, {
             method: "GET",
             headers: {
                 'Accept': 'application/json'
@@ -143,7 +143,7 @@ searchButton.onclick = async function() {
       const lemma = searchInput.value;
       const responseJson = JSON.parse(
       await fetch(
-          "https://kruase.serveo.net/concordancer/lemma", {
+          `${url}/concordancer/lemma`, {
               method: "POST",
               headers: {
                   'Accept': 'application/json',
@@ -238,7 +238,7 @@ searchButton.onclick = async function() {
       const token = searchInput.value;
       const responseJson = JSON.parse(
       await fetch(
-          "https://kruase.serveo.net/concordancer/token", {
+          `${url}/concordancer/token`, {
               method: "POST",
               headers: {
                   'Accept': 'application/json',
@@ -336,7 +336,7 @@ searchButton.onclick = async function() {
     }
     const responseJson = JSON.parse(
     await fetch(
-        "https://kruase.serveo.net/concordancer/form", {
+        `${url}/concordancer/form`, {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
@@ -494,7 +494,7 @@ sendTextButton.onclick = async function() {
 
   const dbNames = JSON.parse(
     await fetch(
-        "https://kruase.serveo.net/concordancer/db_names", {
+        `${url}/concordancer/db_names`, {
             method: "GET",
             headers: {
                 'Accept': 'application/json'
@@ -514,7 +514,7 @@ sendTextButton.onclick = async function() {
 
   const responseJson = JSON.parse(
     await fetch(
-        "https://kruase.serveo.net/concordancer/text",
+        `${url}/concordancer/text`,
           {
             method: "POST",
             headers: {
@@ -562,7 +562,7 @@ sendFilesButton.onclick = async function() {
 
   const dbNames = JSON.parse(
     await fetch(
-        "https://kruase.serveo.net/concordancer/db_names", {
+        `${url}/concordancer/db_names`, {
             method: "GET",
             headers: {
                 'Accept': 'application/json'
@@ -582,7 +582,7 @@ sendFilesButton.onclick = async function() {
 
   const responseJson = JSON.parse(
     await fetch(
-        "https://kruase.serveo.net/concordancer/files",
+        `${url}/concordancer/files`,
           {
             method: "POST",
             headers: {
