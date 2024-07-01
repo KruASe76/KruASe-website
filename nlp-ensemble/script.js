@@ -1,3 +1,5 @@
+const url = "http://3nmlc2lf1tktmf5peph2ey.webrelay.io";
+
 const searchButton = document.getElementById("btnSearch");
 const reloadDbButton = document.getElementById("btnReload")
 const prevPageButton = document.getElementById("btnPrevPage");
@@ -154,3 +156,7 @@ btnChangeTheme.onclick = function() {
     html.classList.add("shrek");
   }
 }
+
+
+document.querySelector("#sectTree > .divFiles > form").setAttribute("action", `${url}/syntax/files`);
+document.querySelector("#sectTree > .divText > form").setAttribute("action", `${url}/syntax/text`);
