@@ -121,7 +121,8 @@ reloadDbButton.onclick = async function() {
         `${url}/concordancer/db_names`, {
             method: "GET",
             headers: {
-                'Accept': 'application/json'
+                'Accept': 'application/json',
+                'ngrok-skip-browser-warning': 'true',
             }
         }
     )
@@ -147,7 +148,8 @@ searchButton.onclick = async function() {
               method: "POST",
               headers: {
                   'Accept': 'application/json',
-                  'Content-Type': 'application/json'
+                  'Content-Type': 'application/json',
+                  'ngrok-skip-browser-warning': 'true',
               },
               body: JSON.stringify({
                 "lemma": lemma,
@@ -242,7 +244,8 @@ searchButton.onclick = async function() {
               method: "POST",
               headers: {
                   'Accept': 'application/json',
-                  'Content-Type': 'application/json'
+                  'Content-Type': 'application/json',
+                  'ngrok-skip-browser-warning': 'true',
               },
               body: JSON.stringify({
                 "token": token,
@@ -340,7 +343,8 @@ searchButton.onclick = async function() {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'ngrok-skip-browser-warning': 'true',
             },
             body: JSON.stringify(
               {
@@ -497,7 +501,8 @@ sendTextButton.onclick = async function() {
         `${url}/concordancer/db_names`, {
             method: "GET",
             headers: {
-                'Accept': 'application/json'
+                'Accept': 'application/json',
+                'ngrok-skip-browser-warning': 'true',
             }
         }
     )
@@ -519,7 +524,8 @@ sendTextButton.onclick = async function() {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'ngrok-skip-browser-warning': 'true',
             },
             body: JSON.stringify({
               "text": text,
@@ -565,7 +571,8 @@ sendFilesButton.onclick = async function() {
         `${url}/concordancer/db_names`, {
             method: "GET",
             headers: {
-                'Accept': 'application/json'
+                'Accept': 'application/json',
+                'ngrok-skip-browser-warning': 'true',
             }
         }
     )
@@ -586,7 +593,8 @@ sendFilesButton.onclick = async function() {
           {
             method: "POST",
             headers: {
-                'Accept': 'application/json'
+                'Accept': 'application/json',
+                'ngrok-skip-browser-warning': 'true',
             },
             body: formData
           }

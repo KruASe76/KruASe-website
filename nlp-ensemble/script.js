@@ -1,4 +1,7 @@
-const url = "https://f0c833950b271b.lhr.life";
+const urlResponse = await fetch(
+  "https://gist.githubusercontent.com/KruASe76/296443317b2a308a42f0c8c1cff2f1a6/raw/5c1b805a32fe490d0c021cd9ca9ce19bb24c7f45/localhost_domain.url"
+);
+const url = await urlResponse.text();
 
 const searchButton = document.getElementById("btnSearch");
 const reloadDbButton = document.getElementById("btnReload")
