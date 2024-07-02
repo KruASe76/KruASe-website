@@ -1,3 +1,6 @@
+import * as exports from "./script.js";
+Object.entries(exports).forEach(([name, exported]) => window[name] = exported);
+
 let prevValue = 1;
 let allPages = [];
 let currentPage = 0;
