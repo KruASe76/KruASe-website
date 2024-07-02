@@ -1,3 +1,6 @@
+import * as exports from "./script.js";
+Object.entries(exports).forEach(([name, exported]) => window[name] = exported);
+
 const wordToTag = {
   "Подлежащее": "nsubj,csubj",
   "Сказуемое": "ccomp,xcomp,root,cop,aux",
