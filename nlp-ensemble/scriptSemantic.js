@@ -147,7 +147,8 @@ btnSearchCloseWords.onclick = async function() {
         method: "POST",
         headers: {
           'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'ngrok-skip-browser-warning': 'true',
         },
         body: JSON.stringify({
           "add": add,
@@ -202,7 +203,8 @@ btnCompare.onclick = async function() {
         method: "POST",
         headers: {
           'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'ngrok-skip-browser-warning': 'true',
         },
         body: JSON.stringify({
           "word_1": inputFirstWord.value + "_" + selectFirstWordType.value,
@@ -242,7 +244,8 @@ btnSearchNGrams.onclick = async function() {
         method: "POST",
         headers: {
           'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'ngrok-skip-browser-warning': 'true',
         },
         body: JSON.stringify({
           "amount": amount

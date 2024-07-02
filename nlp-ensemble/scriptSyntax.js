@@ -58,7 +58,8 @@ btnSearch1.onclick = async function() {
       {
         method: "POST",
         headers: {
-          'Accept': 'application/json'
+          'Accept': 'application/json',
+          'ngrok-skip-browser-warning': 'true',
         },
         body: formData
       }
