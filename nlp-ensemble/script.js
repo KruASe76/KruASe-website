@@ -1,4 +1,4 @@
-const url = "https://a5ba2b987afa9b.lhr.life";
+const url = "https://f0c833950b271b.lhr.life";
 
 const searchButton = document.getElementById("btnSearch");
 const reloadDbButton = document.getElementById("btnReload")
