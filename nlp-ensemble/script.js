@@ -1,5 +1,5 @@
 const urlResponse = await fetch(
-  "https://gist.githubusercontent.com/KruASe76/296443317b2a308a42f0c8c1cff2f1a6/raw/5c1b805a32fe490d0c021cd9ca9ce19bb24c7f45/localhost_domain.url"
+  `https://gist.githubusercontent.com/KruASe76/296443317b2a308a42f0c8c1cff2f1a6/raw/localhost_domain.url?_=${crypto.randomUUID()}`
 );
 export const url = await urlResponse.text();
 
