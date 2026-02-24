@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/:filename(cv|cv\\.pdf)",
+      "destination": "https://drive.google.com/file/d/10yqd7GULwGK5C9dxDkIfLiW1s1AzkIDb/view?usp=drivesdk",
+      "permanent": false
+    }
+  ]
+}
